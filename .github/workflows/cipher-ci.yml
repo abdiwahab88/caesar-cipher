@@ -35,7 +35,7 @@ jobs:
     - name: Build & push Docker image
       with:
         image: wahab99/my-demo
-        tags: v1, latest
+        tags: v1, v2, latest
         registry: docker.io
         dockerfile: Dockerfile.ci
         username: ${{ secrets.DOCKER_USERNAME }}
