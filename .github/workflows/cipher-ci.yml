@@ -34,7 +34,7 @@ jobs:
         arguments: build
 
     - name: Build  & push Docker image
-    - uses: mr-smithers-excellent/docker-build-push@v6 
+      uses: mr-smithers-excellent/docker-build-push@v6 
       with:
         image: wahab99/my-demo
         tags: v1, v2
