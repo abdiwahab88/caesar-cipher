@@ -18,8 +18,8 @@ permissions:
 
 jobs:
   build:
-
-    runs-on: ubuntu-latest
+    
+    runs-on: wahab-self-hosted #ubuntu-latest
 
     steps:
     - uses: actions/checkout@v3
