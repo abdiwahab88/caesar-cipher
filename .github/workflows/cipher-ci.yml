@@ -36,7 +36,7 @@ jobs:
     - name: Build  & push Docker image
       uses: mr-smithers-excellent/docker-build-push@v6 
       with:
-        image: wahab99/my-demo
+        image: wahab99/my_repos
         tags: v1
         registry: docker.io
         username: ${{ secrets.DOCKER_USERNAME }}
