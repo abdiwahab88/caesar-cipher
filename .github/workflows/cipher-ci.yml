@@ -37,7 +37,7 @@ jobs:
       uses: mr-smithers-excellent/docker-build-push@v6 
       with:
         image: wahab99/my_repos
-        tags: v1
+        tags: cipher-latest
         registry: docker.io
         dockerfile: dockerfile
         username: ${{ secrets.DOCKER_USERNAME }}
