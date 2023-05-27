@@ -1,4 +1,0 @@
-Manifest-Version: 1.0
-Implementation-Title: Caesar cipher
-Main-Class: caesars.cipher.Main
-
