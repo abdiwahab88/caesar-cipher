@@ -21,7 +21,7 @@ steps:
       task: 'build'
 
 
-          # - script: echo "Running build..."
+          ## - script: echo "Running build..."
           #   displayName: 'Build Step 1'
           # - script: echo "Build completed successfully."
           #   displayName: 'Build Step 2'
