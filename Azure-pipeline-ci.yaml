@@ -12,13 +12,13 @@ stages:
     jobs:
       - job: BuildJob
         displayName: 'Build Job'
-        steps:
-          - task: Gradle@2
-            displayName: 'Build with gradle'
-            inputs:
-              workingDirectory: ./build
-              gradleWrapperFile: 'gradlew'
-              task: 'build'
+steps:
+  - task: Gradle@2
+    displayName: 'Build with gradle'
+    inputs:
+      workingDirectory: ./build
+      gradleWrapperFile: 'gradlew'
+      task: 'build'
 
 
           # - script: echo "Running build..."
