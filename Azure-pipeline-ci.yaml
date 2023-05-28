@@ -3,6 +3,10 @@ trigger:
     include:
       - main
 
+variables:
+  acrName: 'wahab2023'  # Replace with your Azure Container Registry name
+  imageTag: '$(Build.BuildId)'  # Use the build ID as the image tag
+
 pool:
   vmImage: 'ubuntu-latest'
 
@@ -18,8 +22,16 @@ steps:
     inputs:
       workingDirectory: ./build
       gradleWrapperFile: 'gradlew'
-      task: 'build'
+      task: 'clean build'
 
+  - task: Docker@2
+    inputs:
+      containerRegistry: 'wahab2023.azurecr.io'  # Replace with your Azure Container Registry connection name
+      repository: '$(acrName)'
+      command: 'buildAndPush'
+      Dockerfile: './dockerfile'  # Replace with the path to your Dockerfile
+      tags: |
+        $(imageTag)
 
           ## - script: echo "Running build..."
           #   displayName: 'Build Step 1'
